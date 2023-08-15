@@ -1,0 +1,39 @@
+body{
+    background-color: #ebefee;
+}
+#redon{
+    border-radius: 50px;
+}
+.titulo{
+    font-family: 'Poppins', sans-serif;    
+}
+.subtitulo{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800; 
+}
+.naveCor{
+    background-color: #6dacd8;
+}
+.texto{
+    font-family: 'Poppins', sans-serif;
+}
+.buscar{
+ position: fixed;
+ width: 100px;
+ background-color: blue;
+
+}
+#consultar[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+#consultar[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.detalhe{
+    color: brown;
+    
+}
