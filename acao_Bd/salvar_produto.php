@@ -11,7 +11,7 @@
 
             $code_prod = random_int(000000, 999999);
 
-            $sql = "INSERT INTO produto (id_produto, name_produto, cod_produto, qtd_produto, qld_produto, local_produto, setor_produto, obs_produto) VALUES (NULL,'{$name_prod}','{$code_prod}','{$qtd_prod}','{$qld_prod}','{$local_prod}','{$setor_prod}', '{$obs_prod}');";
+            $sql = "INSERT INTO produto (name_produto, cod_produto, qtd_produto, qld_produto, local_produto, setor_produto, obs_produto) VALUES ('{$name_prod}','{$code_prod}','{$qtd_prod}','{$qld_prod}','{$local_prod}','{$setor_prod}', '{$obs_prod}');";
 
             $res = $conn->query($sql);
 
