@@ -15,6 +15,7 @@
                 <option value="BARROSO">Barroso</option>
             </select>
         </div>
+        <!--Name do produto-->
         <fieldset>
             <legend class="mt-3"><label for="name_produto">Nome do Produto:</label></legend>
             <div class="form-group p-2">
