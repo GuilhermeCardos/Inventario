@@ -33,13 +33,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `produto` (
   `id_produto` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `name_produto` varchar(255) NOT NULL,
   `cod_produto` int(11) NOT NULL,
   `qtd_produto` varchar(255) NOT NULL,
   `qld_produto` varchar(250) NOT NULL,
   `local_produto` varchar(255) NOT NULL,
   `setor_produto` varchar(255) NOT NULL,
-  `obs_produto` mediumtext NOT NULL
+  `obs_produto` mediumtext NOT NULL,
+  PRIMARY KEY (id_produto),
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id_user)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -50,7 +53,8 @@ CREATE TABLE `usuario` (
   `id_user` int(11) NOT NULL,
   `full_name_user` varchar(255) NOT NULL,
   `email_user`varchar(255) NOT NULL,
-  `pass_user` varchar(255) NOT NULL
+  `pass_user` varchar(255) NOT NULL,
+  PRIMARY KEY (id_user)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
