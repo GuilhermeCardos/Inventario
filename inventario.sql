@@ -43,6 +43,17 @@ CREATE TABLE `produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Estrutura para tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id_user` int(11) NOT NULL,
+  `full_name_user` varchar(255) NOT NULL,
+  `email_user`varchar(255) NOT NULL,
+  `pass_user` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Despejando dados para a tabela `produto`
 --
 
