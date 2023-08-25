@@ -32,7 +32,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `produto` (
-  `id_produto` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NOT NULL,
   `name_produto` varchar(255) NOT NULL,
   `cod_produto` int(11) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE `produto` (
 --
 
 CREATE TABLE `usuario` (
-  `id_user` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `full_name_user` varchar(255) NOT NULL,
   `email_user`varchar(255) NOT NULL,
   `pass_user` varchar(255) NOT NULL,
@@ -61,11 +61,14 @@ CREATE TABLE `usuario` (
 -- Despejando dados para a tabela `produto`
 --
 
-INSERT INTO `produto` (`id_produto`, `name_produto`, `cod_produto`, `qtd_produto`, `qld_produto`, `local_produto`, `setor_produto`, `obs_produto`) VALUES
-(1, 'CADEIRA COM BRAçOS', 276784, '50', 'ÓTIMO', 'MATRIZ', 'CANTINA', 'CADEIRAS COM BRAçOS FORTES E ACOLCHOADAS. | ANO: 2015'),
+INSERT INTO `produto` (`id_produto`,`id_produto`, `name_produto`, `cod_produto`, `qtd_produto`, `qld_produto`, `local_produto`, `setor_produto`, `obs_produto`) VALUES
+(1, 'CADEIRA COM BRAçOS',276784, '50', 'ÓTIMO', 'MATRIZ', 'CANTINA', 'CADEIRAS COM BRAçOS FORTES E ACOLCHOADAS. | ANO: 2015'),
 (2, 'MICROFONE SEM FIO', 936185, '2', ' ÓTIMO', 'CATIRI', 'TEMPLO', 'MICROFONES SEM FIO |  MARCA: SAMSUNG.'),
 (3, 'PULPITO DE MADEIRA', 38257, '1', ' ÓTIMO', 'BARROSO', 'TEMPLO', 'PULPITO DE MADEIRA');
 
+
+INSERT INTO `usuario` (`id_user`,`full_name_user`,`email_user`, `pass_user`) VALUES
+(1,'LUIZ', 'LUIZ@GMAIL', '12323');
 --
 -- Índices para tabelas despejadas
 --
