@@ -37,3 +37,12 @@ body{
     color: brown;
     
 }
+
+.login{
+
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

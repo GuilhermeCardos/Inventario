@@ -52,7 +52,7 @@ CREATE TABLE `produto` (
 CREATE TABLE `usuario` (
   `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `full_name_user` varchar(255) NOT NULL,
-  `email_user`varchar(255) NOT NULL,
+  `login_name` varchar(255) NOT NULL,
   `pass_user` varchar(255) NOT NULL,
   PRIMARY KEY (id_user)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
