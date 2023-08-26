@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(empty($_SESSION)){
+        print"<script> location.href='login.php';</script>";
+    }
+?>
+
 <!doctype html>
 <html lang="pt-br">
     <head>

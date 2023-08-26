@@ -46,6 +46,15 @@ CREATE TABLE `produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Despejando dados para a tabela `produto`
+--
+
+INSERT INTO `produto` (`id_produto`,`id_produto`, `name_produto`, `cod_produto`, `qtd_produto`, `qld_produto`, `local_produto`, `setor_produto`, `obs_produto`) VALUES
+(1, 'CADEIRA COM BRAçOS',276784, '50', 'ÓTIMO', 'MATRIZ', 'CANTINA', 'CADEIRAS COM BRAçOS FORTES E ACOLCHOADAS. | ANO: 2015'),
+(2, 'MICROFONE SEM FIO', 936185, '2', ' ÓTIMO', 'CATIRI', 'TEMPLO', 'MICROFONES SEM FIO |  MARCA: SAMSUNG.'),
+(3, 'PULPITO DE MADEIRA', 38257, '1', ' ÓTIMO', 'BARROSO', 'TEMPLO', 'PULPITO DE MADEIRA');
+
+--
 -- Estrutura para tabela `usuario`
 --
 
@@ -56,22 +65,14 @@ CREATE TABLE `usuario` (
   `pass_user` varchar(255) NOT NULL,
   PRIMARY KEY (id_user)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `produto`
---
-
-INSERT INTO `produto` (`id_produto`,`id_produto`, `name_produto`, `cod_produto`, `qtd_produto`, `qld_produto`, `local_produto`, `setor_produto`, `obs_produto`) VALUES
-(1, 'CADEIRA COM BRAçOS',276784, '50', 'ÓTIMO', 'MATRIZ', 'CANTINA', 'CADEIRAS COM BRAçOS FORTES E ACOLCHOADAS. | ANO: 2015'),
-(2, 'MICROFONE SEM FIO', 936185, '2', ' ÓTIMO', 'CATIRI', 'TEMPLO', 'MICROFONES SEM FIO |  MARCA: SAMSUNG.'),
-(3, 'PULPITO DE MADEIRA', 38257, '1', ' ÓTIMO', 'BARROSO', 'TEMPLO', 'PULPITO DE MADEIRA');
-
-
-INSERT INTO `usuario` (`id_user`,`full_name_user`,`email_user`, `pass_user`) VALUES
-(1,'LUIZ', 'LUIZ@GMAIL', '12323');
 --
 -- Índices para tabelas despejadas
 --
+INSERT INTO `usuario` (`full_name_user`, `login_name`,`pass_user`) VALUES
+('LUIZ GUILHERME CARDOSO', 'luiz.cardoso', '123');
+
+
+
 
 --
 -- Índices de tabela `produto`
