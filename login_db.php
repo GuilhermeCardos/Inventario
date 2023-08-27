@@ -1,16 +1,18 @@
 <?php
     session_start();
+
     if( empty($_POST) or (empty($_POST["usuario"]) or (empty($_POST["senha"])))){
         print"<script> location.href='login.php';</script>";
     }
 
-    include("Database/config.php");
+    include('Database/config.php');
 
     $usuario= $_POST['usuario'];
+    echo $usuario;
 
-    $senha = $_POST['password'];
+    $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuario WHERE usuario = '{$usuario}' AND '{$senha}'";
+    $sql = "SELECT * FROM usuario WHERE login_name = '{$usuario}' AND pass_user = '{$senha}'";
 
     $res = $conn -> query($sql) or die ($conn->error);
 
@@ -20,8 +22,9 @@
 
     if($qtd>0){
         $_SESSION["usuario"]= $usuario;
-        $_SESSION["name"] = $row-> full_name_user;
-      //$_SESSION["tipo"] = $row -> tipo  // TIPOS DE USUARIOS PRIVILÉGIOS - ADMIN | USUÁRIO COMUN  
+        $_SESSION["name"] = $row-> full_name_user;     
+
+      //$_SESSION["tipo"] = $row -> tipo  // TIPOS DE PRIVILÉGIOS - ADMIN | USUÁRIO COMUN  
 
       print"<script> location.href='index.php';</script>";
     }else

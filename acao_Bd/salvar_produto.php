@@ -2,6 +2,15 @@
 
     switch (@$_REQUEST["acao"]) {
         case 'cadastrar':
+
+            //USUÁRIO 
+            $usuario = $_SESSION["usuario"];
+            $sql1 = "SELECT id_user FROM usuario WHERE login_name = '{$usuario}'";
+            $res1 = $conn->query($sql1);
+            $row1 = $res1->fetch_object();
+            $id_usuario = $row1->id_user;
+
+            //PRODUTO
             $name_prod   = strtoupper($_POST["name_produto"]);
             $qtd_prod    = $_POST["qtd_produto"];
             $local_prod  = $_POST["local"];
@@ -11,8 +20,7 @@
 
             $code_prod = random_int(000000, 999999);
 
-            $sql = "INSERT INTO produto (name_produto, cod_produto, qtd_produto, qld_produto, local_produto, setor_produto, obs_produto) VALUES ('{$name_prod}','{$code_prod}','{$qtd_prod}','{$qld_prod}','{$local_prod}','{$setor_prod}', '{$obs_prod}');";
-
+            $sql = "INSERT INTO produto (id_usuario, name_produto, cod_produto, qtd_produto, qld_produto, local_produto, setor_produto, obs_produto) VALUES ('{$id_usuario}','{$name_prod}','{$code_prod}','{$qtd_prod}','{$qld_prod}','{$local_prod}','{$setor_prod}', '{$obs_prod}');";
             $res = $conn->query($sql);
 
             if($res == true){

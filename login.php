@@ -27,24 +27,24 @@
         </nav>
     
         <!-- CONTAINER LOGIN -->
-        <div class="login">
+        <div class="login texto">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4">
                         <div class="card">
-                            <div class="card-body"><h3>Login</h3> </div>
+                            <div class="card-body "><h3>Login</h3> </div>
                             <div class="card-body">
-                                <form action="login_db.php" method="post">
+                                <form action="login_db.php" method="POST">
                                     <div>
                                         <div class="mb-3">
                                             <label for="">Usuário</label>
-                                            <input type="text" name="usuario" id="usuario" class="form-control">
+                                            <input type="text" name="usuario" id="usuario" class="form-control" required>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="mb-3">
                                             <label for="">Senha:</label>
-                                            <input type="password" name="password" id="password" class="form-control">
+                                            <input type="password" name="senha" id="senha" class="form-control" required>
                                         </div>
                                     </div>
                                     <div>

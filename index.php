@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     if(empty($_SESSION)){
         print"<script> location.href='login.php';</script>";
     }
@@ -44,6 +45,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?page=buscar">Pesquisar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger" style="color: white" href="logout.php">Sair</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -75,6 +79,7 @@
                             break;
                             default:
                             print"<h1 class='subtitulo'>Seja Bem-Vindo!</h1>";
+                            print $_SESSION["usuario"];
                            
                         }      
                     ?>
