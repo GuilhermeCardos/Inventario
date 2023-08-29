@@ -1,4 +1,5 @@
 <h3 class="text-center mb-4 p-2 subtitulo">Pesquisar</h3>
+
 <nav class="navbar justify-content-center">
   
   <form class="form-inline pb-5 d-flex justify-content-end" action="?page=buscar" method="POST">

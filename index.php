@@ -46,6 +46,9 @@
                         <a class="nav-link" href="?page=buscar">Pesquisar</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="?page=relatorio">Relatório</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link btn btn-danger" style="color: white" href="logout.php">Sair</a>
                     </li>
                 </ul>
@@ -76,6 +79,12 @@
                             break;
                             case "edite":
                                 include("form_edicao/edite_produto.php"); // EDITAR O PRODUTO
+                            break;
+                            case "relatorio":
+                                include("relatorio/relatorio.php"); // RELATORIO DO PRODUTO / IGREJA
+                            break;
+                            case "gerar":
+                                include("relatorio/gerar_planilha.php"); // GERAR RELATORIO DO PRODUTO / IGREJA
                             break;
                             default:
                             print"<h1 class='subtitulo'>Seja Bem-Vindo!</h1>";
