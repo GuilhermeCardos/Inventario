@@ -6,16 +6,19 @@
 	<head>
 	<body>
 		<?php
-            define('HOST', 'localhost');
-            define('USER', 'root');
-            define('PASS', 'root@2023');
-            define('BASE', 'inventario');
+            include("..\Database\config.php");
+
+            if (!empty($_POST['local'])) {
+                $local = $_POST['local'];
+            }else {
+                $local = "MATRIZ";
+            }
         
             $conn = new MySQLi(HOST, USER, PASS, BASE);
 
 
             // Definimos o nome do arquivo que será exportado
-            $arquivo = 'relatorio.xls';
+            $arquivo = 'RELATÓRIO '.$local.'.xls';
             
             // Criamos uma tabela HTML com o formato da planilha
             $html = '';
@@ -36,7 +39,7 @@
             $html .= '</tr>';
             
             //Selecionar tos itens da tabela 
-            $result_relatorio = "SELECT * FROM produto";
+            $result_relatorio = "SELECT * FROM produto WHERE local_produto = '{$local}';";
             $resultado_relatorio = mysqli_query($conn , $result_relatorio);
             
             while($row_relatorio = mysqli_fetch_assoc($resultado_relatorio)){
