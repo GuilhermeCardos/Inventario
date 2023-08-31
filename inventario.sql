@@ -69,7 +69,7 @@ CREATE TABLE `usuario` (
 -- Índices para tabelas despejadas
 --
 INSERT INTO `usuario` (`full_name_user`, `login_name`,`pass_user`) VALUES
-('LUIZ GUILHERME CARDOSO', 'luiz.cardoso', '123'), ('admin', 'admin', 'admin');
+('admin', 'admin', 'root'),('JEFERSON DUARTE', 'jeferson.duarte', 'duarte'),('SANDRO DINIZ', 'sandro.diniz', 'diniz');
 
 
 
